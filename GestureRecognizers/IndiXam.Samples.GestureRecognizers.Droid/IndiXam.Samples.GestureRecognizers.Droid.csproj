@@ -63,6 +63,9 @@
     <Reference Include="IndiXam.Forms.Controls.GestureRecognizers">
       <HintPath>..\..\IndiXamBin\IndiXam.Forms.Controls.GestureRecognizers.dll</HintPath>
     </Reference>
+    <Reference Include="Xamarin.Android.Support.v4">
+      <HintPath>..\packages\Xamarin.Android.Support.v4.23.0.1.3\lib\MonoAndroid403\Xamarin.Android.Support.v4.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="MainActivity.cs" />
@@ -88,16 +91,17 @@
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
   <Import Project="..\packages\Xamarin.Forms.1.5.0.6447\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets" Condition="Exists('..\packages\Xamarin.Forms.1.5.0.6447\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets')" />
+  <Target Name="AfterResolveReferences">
+    <!-- Redefine referencepath to add dependencies-->
+    <ItemGroup>
+      <ReferencePath Include="@(ReferenceDependencyPaths)">
+      </ReferencePath>
+    </ItemGroup>
+  </Target>
   <ItemGroup>
     <ProjectReference Include="..\IndiXam.Samples.GestureRecognizers\IndiXam.Samples.GestureRecognizers.csproj">
       <Project>{435D9283-3CAA-4507-8BAB-0E0E8717A31B}</Project>
       <Name>IndiXam.Samples.GestureRecognizers</Name>
     </ProjectReference>
   </ItemGroup>
-  <Target Name="AfterResolveReferences">
-    <!-- Redefine referencepath to add dependencies-->
-    <ItemGroup>
-      <ReferencePath Include="@(ReferenceDependencyPaths)"></ReferencePath>
-    </ItemGroup>
-  </Target>
 </Project>
