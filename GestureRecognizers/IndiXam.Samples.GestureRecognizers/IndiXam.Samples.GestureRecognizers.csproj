@@ -52,4 +52,10 @@
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
+  <Target Name="AfterResolveReferences">
+    <!-- Redefine referencepath to add dependencies-->
+    <ItemGroup>
+      <ReferencePath Include="@(ReferenceDependencyPaths)"></ReferencePath>
+    </ItemGroup>
+  </Target>
 </Project>
