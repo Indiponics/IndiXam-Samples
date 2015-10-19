@@ -57,14 +57,14 @@
     <Reference Include="Xamarin.Forms.Xaml">
       <HintPath>..\packages\Xamarin.Forms.1.5.0.6447\lib\MonoAndroid10\Xamarin.Forms.Xaml.dll</HintPath>
     </Reference>
-    <Reference Include="IndiXam.Forms.Controls.GestureRecognizers.Droid">
-      <HintPath>..\..\IndiXamBin\IndiXam.Forms.Controls.GestureRecognizers.Droid.dll</HintPath>
-    </Reference>
-    <Reference Include="IndiXam.Forms.Controls.GestureRecognizers">
-      <HintPath>..\..\IndiXamBin\IndiXam.Forms.Controls.GestureRecognizers.dll</HintPath>
-    </Reference>
     <Reference Include="Xamarin.Android.Support.v4">
       <HintPath>..\packages\Xamarin.Android.Support.v4.23.0.1.3\lib\MonoAndroid403\Xamarin.Android.Support.v4.dll</HintPath>
+    </Reference>
+    <Reference Include="GestureRecognizers">
+      <HintPath>..\Refs\GestureRecognizers.dll</HintPath>
+    </Reference>
+    <Reference Include="GestureRecognizers.Droid">
+      <HintPath>..\Refs\GestureRecognizers.Droid.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
